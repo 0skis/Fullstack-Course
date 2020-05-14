@@ -1,0 +1,10 @@
+ Volume in drive C has no label.
+ Volume Serial Number is A07C-D982
+
+ Directory of C:\Users\flodi\Documents\Fullstack
+
+2020-05-14  17:06    <DIR>          .
+2020-05-14  17:06    <DIR>          ..
+2020-05-14  17:06                 0 oskar.txt
+               1 File(s)              0 bytes
+               2 Dir(s)  25ÿ494ÿ581ÿ248 bytes free
