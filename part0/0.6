@@ -1,0 +1,14 @@
+note over browser:
+User inputs text into the
+new note field and saves it
+end note
+
+browser-->server: HTTP POST http://fullstack-exampleapp.herokuapp.com/new_note_spa
+server->browser: HTTP code 201
+
+note over browser:
+server didn't ask for a redirect
+so the browwser remains on the
+same page without any further
+HTTP requests
+end note
