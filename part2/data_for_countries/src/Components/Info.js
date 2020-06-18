@@ -9,7 +9,8 @@ const Info = (country) => {
             <p>Population: {country.country.population}</p>
             <h1>Spoken languages</h1>
             <ul>
-                {country.country.languages.map(x => <li key={x.iso639_1}>{x.name}</li>)}
+                {country.country.languages.map(x => 
+                <li key={x.iso639_1}>{x.name}</li>)}
             </ul>
             <img src={country.country.flag} alt={'Flag was not available'} height='150'></img>
             <Weather country={country.country} />
