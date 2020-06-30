@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Person from './Components/Person'
 import Filter from './Components/Filter'
 import PersonForm from './Components/PersonForm'
-import axios from 'axios'
+import PersonService from './Services/PersonService'
 
 const App = () => {
   const [ persons, setPersons ] = useState([])
@@ -12,10 +12,10 @@ const App = () => {
   const personsToShow = persons.filter(person => person.name.toLowerCase().includes(search.toLowerCase()))
 
   const hook = () => {
-    axios
-      .get('http://localhost:3001/persons')
+    PersonService
+      .getAll()
       .then(response => {
-        console.log('promise fulfilled')
+        console.log('Data recieved')
         setPersons(response.data)
       })
   }
@@ -37,7 +37,11 @@ const App = () => {
       <h2>Numbers</h2>
       <ul>
         {personsToShow.map(person =>
-          <Person key={person.id} person={person} />
+          <Person 
+            key={person.id} 
+            person={person} 
+            persons={persons}
+            setPersons={setPersons}/>
         )}
       </ul>
     </div>
